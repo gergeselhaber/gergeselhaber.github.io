@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CGH Wedding V2</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wedding Website (Independent Sub-Guest Rows)</title>
+  <!-- Our CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- SheetJS Library for Excel parsing/generation -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+
+  <div class="main-container">
+
+    <!-- NAVIGATION -->
+    <nav>
+      <button class="nav-btn" data-target="invitation-section">Invitation &amp; Details</button>
+      <button class="nav-btn" data-target="admin-section">Admin</button>
+    </nav>
+
+    <!-- ============= ADMIN SECTION ============= -->
+    <section id="admin-section" class="hidden card">
+      <h1>Admin Panel</h1>
+      <p>Manage your guest list here (Developer Only).</p>
+
+      <!-- Password Prompt -->
+      <div id="admin-access">
+        <button id="admin-auth-btn" class="btn-green">Admin Access</button>
+      </div>
+
+      <!-- Actual Admin Content -->
+      <div id="admin-content" class="hidden">
+        
+        <!-- Import/Export Excel -->
+        <div class="admin-section">
+          <h2>Import / Export Excel</h2>
+          <p style="text-align:center;">
+            <input type="file" id="excelFileInput" accept=".xlsx, .xls, .csv" />
+            <button id="importExcelBtn" class="btn-green">Import Excel</button>
+            <button id="exportExcelBtn" class="btn-orange">Download Updated Excel</button>
+          </p>
+        </div>
+
+        <!-- Table + Buttons -->
+        <div class="admin-section">
+          <h2>Guest List</h2>
+          <button id="addMainGuestBtn" class="btn-green" style="margin-bottom:10px">
+            + Add Main Guest
+          </button>
+
+          <table id="guest-table">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Normal First Name</th>
+                <th>Normal Last Name</th>
+                <th>Arabic First Name</th>
+                <th>Arabic Last Name</th>
+                <th># Family</th>
+                <th>Language</th>
+                <th>Yes</th>
+                <th>No</th>
+                <th>Maybe</th>
+                <th>Open Invitation</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody><!-- Filled by JS --></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= INVITATION SECTION ============= -->
+    <section id="invitation-section" class="card">
+      <!-- LANGUAGE SWITCHER -->
+      <div class="lang-top">
+        <p id="change-lang-label">Change Language:</p>
+        <button class="lang-btn" data-lang="en">English</button>
+        <button class="lang-btn" data-lang="fr">Français</button>
+        <button class="lang-btn" data-lang="ar">العربية</button>
+      </div>
+
+      <!-- Couple Photo -->
+      <img 
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAAyCAYAAABm+0PoAAAACXBIWXMAAABIAAAASC4Gje0AAAA8klEQVR4nO3QMQEAAAgDMOZf9F6ZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBg5+DrAAApGteEgAAAABJRU5ErkJggg==" 
+        alt="Christina and Gerges"
+        class="couple-photo"
+      />
+
+      <!-- Title -->
+      <h1 id="wedding-title" class="title-green">
+        Christina’s and Gerges’s Wedding
+      </h1>
+
+      <!-- Personalized Greeting -->
+      <p id="welcome-text">Hello dear guest!</p>
+
+      <!-- Wedding Details -->
+      <div id="wedding-details">
+        <h2 id="wedding-details-title">Wedding Details</h2>
+        <!-- Church + map -->
+        <p id="date-label">Date: August 23, 2025</p>
+        <p id="church-label">
+          Church: Saint Elie Church, 5:00 PM 
+          (<a href="https://maps.app.goo.gl/ATj56wNMUn2gixk5A" target="_blank">Map</a>)
+        </p>
+        <p id="reception-label">
+          Party: Château Cana, 8:00 PM
+          (<a href="https://maps.app.goo.gl/jRooZVWtH3HxwTHN6" target="_blank">Map</a>)
+        </p>
+        <p id="dress-code-label">Dress Code: Formal attire</p>
+      </div>
+
+      <!-- RSVP -->
+      <div id="rsvp-section">
+        <h2 id="rsvp-heading">RSVP</h2>
+        <form id="rsvp-form">
+          <div id="rsvp-guests-container"><!-- Filled by JS --></div>
+          <button type="button" id="save-btn" class="btn-green" disabled>Save</button>
+          <button type="button" id="modify-btn" class="btn-orange" disabled>Modify</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div id="contact-info">
+        <h3 id="contact-info-title">Need info about traveling or accommodations?</h3>
+        <p id="contact-info-sub">Contact us on WhatsApp:</p>
+        <ul>
+          <li>
+            <a id="chat-gerges-link" href="https://wa.me/33698608104" target="_blank">Chat with Gerges</a>
+          </li>
+          <li>
+            <a id="chat-christina-link" href="https://wa.me/33777320230" target="_blank">Chat with Christina</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Our main JS -->
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+/* BASIC RESET */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f7f8; 
+  color: #333;
+}
+
+.main-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+/* Make the admin card wider specifically */
+#admin-section.card {
+  width: 1200px;
+  max-width: 95%;
+  margin: 0 auto;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+  margin-bottom: 10px;
+  color: #444;
+  text-align: center; 
+}
+.title-green {
+  color: #2c974b; 
+}
+
+/* FORMS/TABLES */
+label {
+  display: block;
+  margin: 8px 0 4px;
+}
+input, select, button {
+  margin-bottom: 8px;
+  padding: 8px;
+  font-size: 1rem;
+}
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+/* BUTTON COLORS */
+.btn-green {
+  background-color: #2c974b;
+  color: #fff;
+}
+.btn-green:hover {
+  background-color: #276c38;
+}
+.btn-orange {
+  background-color: #ff9900;
+  color: #fff;
+}
+.btn-orange:hover {
+  background-color: #e68a00;
+}
+.btn-red {
+  background-color: #e74c3c;
+  color: #fff;
+}
+.btn-red:hover {
+  background-color: #c0392b;
+}
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+td input[type="text"], td input[type="number"], td select {
+  width: 100px;
+}
+
+/* NAV BUTTONS */
+nav {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.nav-btn {
+  margin-right: 10px;
+  background-color: #ccc;
+  color: #333;
+  border: 1px solid #999;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+.nav-btn:hover {
+  background-color: #999;
+  color: #fff;
+}
+
+/* LANG SWITCHER */
+.lang-top {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.lang-btn {
+  margin: 5px;
+  background-color: #e9e9e9;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+.lang-btn:hover {
+  background-color: #ccc;
+}
+
+/* MISC */
+.hidden {
+  display: none;
+}
+.admin-section, #rsvp-section {
+  margin-top: 20px;
+}
+.couple-photo {
+  display: block;
+  margin: 0 auto 15px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* RTL WHEN ARABIC */
+html[dir="rtl"] {
+  text-align: right;
+}
